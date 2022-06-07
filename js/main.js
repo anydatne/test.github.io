@@ -16,7 +16,8 @@ function init() {
     $('#desc').text(CONFIG.desc)
     $('#yes').text(CONFIG.btnYes)
     $('#no').text(CONFIG.btnNo)
-
+    var audio = new Audio('sound/sound.mp3');
+    audio.play();
     var xYes = (0.9 * $(window).width() - $('#yes').width() - $('#no').width()) / 2;
     var xNo = xYes + $('#yes').width() + 0.1 * $(window).width();
     var y = 0.75 * $(window).height();
@@ -46,8 +47,6 @@ function firstQuestion() {
 // switch button position
 function switchButton() {
     var audio = new Audio('sound/duck.mp3');
-    var audio = new Audio('sound/sound.mp3')
-    audio.play();
     audio.play();
     var leftNo = $('#no').css("left");
     var topNO = $('#no').css("top");
